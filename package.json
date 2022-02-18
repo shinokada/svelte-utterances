@@ -1,0 +1,34 @@
+{
+  "name": "@codewithshin/svelte-utterances",
+  "version": "0.1.0",
+  "description": "Svelte Utterances Component",
+  "author": {
+    "name": "Shinichi Okada",
+    "email": "connect@codewithshin.com",
+    "url": "https://blog.codewithshin.com"
+  },
+  "bugs": "https://github.com/shinokada/svelte-uttrances/issues",
+  "homepage": "https://github.com/shinokada/svelte-uttrances",
+  "license": "MIT",
+  "scripts": {
+    "dev": "svelte-kit dev",
+    "build": "svelte-kit build",
+    "package": "svelte-kit package",
+    "preview": "svelte-kit preview"
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-auto": "next",
+    "@sveltejs/kit": "next",
+    "svelte": "^3.44.0"
+  },
+  "type": "module",
+	"keywords": [
+    "svelte",
+    "sveltekit",
+    "comments"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shinokada/svelte-uttrances"
+  }
+}
