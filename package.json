@@ -17,6 +17,7 @@
     "preview": "svelte-kit preview"
   },
   "devDependencies": {
+    "@codewithshin/svelte-utterances": "^0.1.2",
     "@sveltejs/adapter-auto": "next",
     "@sveltejs/kit": "next",
     "svelte": "^3.44.0",
