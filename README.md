@@ -19,7 +19,15 @@ npm i -D @codewithshin/svelte-utterances
 
 Select one from:
 
-`github-light`, `github-dark`, `preferred-color-scheme`, `github-dark-orange`, `icy-dark`, `dark-blue`, `photon-dark`, `boxy-light`, or `gruvbox-dark`.
+- github-light
+- github-dark
+- preferred-color-scheme
+- github-dark-orange
+- icy-dark
+- dark-blue
+- photon-dark
+- boxy-light
+- gruvbox-dark
 
 ## How to use
 
@@ -30,6 +38,7 @@ import { Utterances } from '@codewithshin/svelte-utterances'
 
 <Utterances 
   theme="github-dark"
+  reponame="yourname/repo-name"
 />
 ```
 
