@@ -17,7 +17,7 @@ npm i -D @codewithshin/svelte-utterances
 
 ### Themes
 
-Select one from:
+The default is github-light. Select one from:
 
 - github-light
 - github-dark
@@ -28,6 +28,16 @@ Select one from:
 - photon-dark
 - boxy-light
 - gruvbox-dark
+
+### Issue term
+
+The default is pathname. Select one from:
+
+- url
+- title
+- og:title
+- [Enter issue number]
+- [Enter term]
 
 ## How to use
 
@@ -47,7 +57,6 @@ Check more details [Utterances](https://utteranc.es/)
 ## Credits
 
 - [James Perkins](https://www.jamesperkins.dev/post/supercharge-your-astro-blog)
-
 
 ## References
 
