@@ -1,6 +1,6 @@
 {
   "name": "@codewithshin/svelte-utterances",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Svelte Utterances Component",
   "author": {
     "name": "Shinichi Okada",
@@ -19,10 +19,11 @@
   "devDependencies": {
     "@sveltejs/adapter-auto": "next",
     "@sveltejs/kit": "next",
-    "svelte": "^3.44.0"
+    "svelte": "^3.44.0",
+    "svelte2tsx": "^0.5.5"
   },
   "type": "module",
-	"keywords": [
+  "keywords": [
     "svelte",
     "sveltekit",
     "comments"
