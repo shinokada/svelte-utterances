@@ -5,8 +5,8 @@ layout: doc
 <div class="max-w-3xl mx-auto mb-8">
     <h1 class="text-3xl text-gray-900 w-full dark:text-white py-4">Svelte-utterances</h1>
 
-   <a href="https://github.com/shinokada/svelte-utterances" target="_blank" class="text-gray-900 dark:text-white hover:underline"
-      >Svelte-utterances GitHub Repo</a>
+   <p class="text-gray-900 dark:text-white "><a href="https://utteranc.es/" target="_blank" class="underline"
+      >Utterances</a> component for Svelte. A lightweight comments widget built on GitHub issues.</p>
 
 <h2 class="text-gray-900 text-2xl w-full dark:text-white py-4">Installation</h2>
 
@@ -48,5 +48,11 @@ let theme = "github-light"
   <Utterances reponame="your-name/repo-name" theme="github-light" />
 </div>
 ```
+
+<h2 class="text-gray-900 text-2xl w-full dark:text-white py-4">References</h2>
+
+<p class="text-gray-900 dark:text-white py-2"><a href="https://utteranc.es/" target="_blank" class="underline">utterances</a></p>
+<p class="text-gray-900 dark:text-white py-2"><a href="https://github.com/utterance/utterances" target="_blank" class="underline">utterances Repo</a></p>
+<p class="text-gray-900 dark:text-white py-2"><a href="https://www.jamesperkins.dev/post/supercharge-your-astro-blog" target="_blank" class="underline">James Perkins</a></p>
 
 </div>
