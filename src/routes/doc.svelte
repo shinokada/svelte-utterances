@@ -21,7 +21,7 @@
       rel: undefined,
     },
     {
-      name: "Design",
+      name: "UI by Svelte-flow",
       link: "https://svelte-flow.vercel.app",
       rel: undefined,
     },
