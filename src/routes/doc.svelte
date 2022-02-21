@@ -10,7 +10,7 @@
   <div class="container">
     <slot />
     <div class="my-16">
-      <Utterances reponame="shinokada/svelte-flow" theme="github-dark" />
+      <Utterances reponame="shinokada/svelte-flow" theme="dark-blue" />
     </div>
   </div>
 </div>
