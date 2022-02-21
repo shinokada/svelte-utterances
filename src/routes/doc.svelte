@@ -35,7 +35,7 @@
   <div class="container">
     <slot />
     <div class="my-16">
-      <Utterances reponame="shinokada/svelte-flow" theme="dark-blue" />
+      <Utterances reponame="shinokada/svelte-utterances" theme="dark-blue" />
     </div>
   </div>
 </div>
