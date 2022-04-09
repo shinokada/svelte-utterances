@@ -52,6 +52,29 @@ import { Utterances } from '@codewithshin/svelte-utterances'
 />
 ```
 
+### Dynamic theme switching
+
+This is an example of how to reactively change the theme.
+
+```js
+<script>
+import { Utterances } from '@codewithshin/svelte-utterances'
+
+let theme = 'github-light';
+
+const switchTheme = () => {
+  theme = theme === 'github-light' ? 'github-dark' : 'github-light';
+}
+</script>
+
+<button on:click={switchTheme}>
+
+<Utterances 
+  theme={theme}
+  reponame="yourname/repo-name"
+/>
+```
+
 Check more details [Utterances](https://utteranc.es/)
 
 ## Credits
