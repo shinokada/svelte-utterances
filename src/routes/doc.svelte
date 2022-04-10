@@ -1,6 +1,6 @@
 <script>
   import "prism-themes/themes/prism-holi-theme.css";
-  import { Utterances } from "@codewithshin/svelte-utterances";
+  import { Utterances } from "$lib/index";
   import { Navbar, Select } from "flowbite-svelte";
   let theme = "github-light";
   let selectprops = {
