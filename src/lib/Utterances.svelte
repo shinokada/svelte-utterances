@@ -20,7 +20,7 @@
   $: {
     if (browser) {
       try {
-        const iFrame = document.getElementsByClassName("utterances-frame");
+        const iFrame = document.getElementsByTagName("iframe")[0];
         iFrame.contentWindow.postMessage(
           { type: "set-theme", theme },
           "https://utteranc.es"
