@@ -3,7 +3,7 @@ layout: doc
 ---
 
 <div class="max-w-3xl mx-auto mb-8">
-    <h1 class="text-3xl text-gray-900 w-full dark:text-white py-4">Svelte-utterances</h1>
+    <h1 class="text-3xl text-gray-900 w-full dark:text-white py-4">Svelte-Utterances</h1>
 
    <p class="text-gray-900 dark:text-white "><a href="https://utteranc.es/" target="_blank" class="underline"
       >Utterances</a> component for Svelte. Utterances is a lightweight comments widget built on GitHub issues.</p>
