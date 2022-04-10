@@ -10,9 +10,11 @@
   };
   let selectClass =
     "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-48 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500";
-  let sitename = "Svelte-utterances";
-  let logo = "/images/mkdir-logo.webp";
-  let alt = "Svelte-utterances";
+  let spanClass =
+    "pl-2 self-center text-lg font-semibold text-gray-900 whitespace-nowrap dark:text-white";
+  let name = "Svelte-Utterances";
+  let logo = "/images/svelte-utterances-logo.png";
+  let alt = "Svelte-Utterances";
   let textsize = "text-lg";
   let menus = [
     {
@@ -35,7 +37,7 @@
 </script>
 
 <div class="max-w-4xl mx-auto py-4">
-  <Navbar {menus} {sitename} {alt} {logo} {textsize} />
+  <Navbar {menus} {name} {alt} {logo} {textsize} {spanClass} />
 </div>
 <div class="max-w-3xl mx-auto pt-8">
   <div class="container">
