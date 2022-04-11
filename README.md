@@ -2,7 +2,7 @@
 
 ## Demo
 
-[Svelte-utterances](https://svelte-utterances.vercel.app/)
+[Svelte-Utterances Demo](https://svelte-utterances.vercel.app/)
 
 ## Installation
 
@@ -56,7 +56,30 @@ import { Utterances } from '@codewithshin/svelte-utterances'
 />
 ```
 
-### Dynamic theme switching
+Check more details [Svelte-Utterances](https://svelte-utterances.vercel.app/)
+
+## Theme switch
+
+You can toggle between two themes.
+
+```html
+<script>
+  import Utterances from "@codewithshin/svelte-utterances";
+  import {Button} from 'flowbite-svelte'
+  let theme = "github-light";
+  const switchTheme = () => {
+    theme = theme === "github-light" ? "github-dark" : "github-light";
+  };
+</script>
+
+<Button on:click={switchTheme} name="Toggle theme" />
+
+<Utterances reponame="shinokada/svelte-utterances" {theme} />
+```
+
+Check more details [Svelte-Utterances](https://svelte-utterances.vercel.app/dynamic-theme)
+
+## Dynamic theme switching
 
 This is an example of how to reactively change the theme.
 
@@ -66,7 +89,7 @@ Install `Flowbite-Svelte`:
 npm i -D flowbite-svelte
 ```
 
-```js
+```html
 <script>
   import { Utterances } from "@codewithshin/svelte-utterances";
   import { Select } from "flowbite-svelte";
@@ -96,7 +119,7 @@ npm i -D flowbite-svelte
 </div>
 ```
 
-Check more details [Utterances](https://utteranc.es/)
+Check more details [Svelte-Utterances](https://svelte-utterances.vercel.app/dynamic-theme)
 
 ## Credits
 
