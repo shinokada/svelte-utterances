@@ -77,7 +77,7 @@ You can toggle between two themes.
 <Utterances reponame="shinokada/svelte-utterances" {theme} />
 ```
 
-Check more details [Svelte-Utterances](https://svelte-utterances.vercel.app/dynamic-theme)
+Check more details [Svelte-Utterances](https://svelte-utterances.vercel.app/theme-switch)
 
 ## Dynamic theme switching
 
