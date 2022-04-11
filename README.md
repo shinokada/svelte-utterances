@@ -4,10 +4,17 @@
 
 [Svelte-Utterances Demo](https://svelte-utterances.vercel.app/)
 
+
 ## Installation
 
 ```sh
 npm i -D @codewithshin/svelte-utterances
+```
+
+After cloning this repo, you can see Svelte-Utterances in action in the demo-site branch.
+
+```sh
+git checkout demo-site
 ```
 
 ## Props
