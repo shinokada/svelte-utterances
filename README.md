@@ -4,10 +4,17 @@
 
 [Svelte-Utterances Demo](https://svelte-utterances.vercel.app/)
 
+
 ## Installation
 
 ```sh
 npm i -D @codewithshin/svelte-utterances
+```
+
+After cloning this repo, you can see Svelte-Utterances in action in the demo-site branch.
+
+```sh
+git checkout demo-site
 ```
 
 ## Props
@@ -77,8 +84,6 @@ You can toggle between two themes.
 <Utterances reponame="shinokada/svelte-utterances" {theme} />
 ```
 
-Check more details [Svelte-Utterances](https://svelte-utterances.vercel.app/theme-switch)
-
 ## Dynamic theme switching
 
 This is an example of how to reactively change the theme.
@@ -119,7 +124,7 @@ npm i -D flowbite-svelte
 </div>
 ```
 
-Check more details [Svelte-Utterances](https://svelte-utterances.vercel.app/dynamic-theme)
+Check more details [Utterances](https://utteranc.es/)
 
 ## Credits
 
