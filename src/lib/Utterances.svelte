@@ -10,10 +10,12 @@
     if (browser) {
       try {
         const iFrame = document.getElementsByClassName("utterances-frame")[0];
-        iFrame.contentWindow.postMessage(
-          { type: "set-theme", theme },
-          "https://utteranc.es"
-        );
+        if (iFrame) {
+          iFrame.contentWindow.postMessage(
+            { type: "set-theme", theme },
+            "https://utteranc.es"
+          );
+        }
       } catch (err) {
         // The iFrame has not been loaded yet.
         console.log("error", err);
