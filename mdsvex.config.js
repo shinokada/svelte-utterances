@@ -2,7 +2,8 @@ import { defineMDSveXConfig as defineConfig } from "mdsvex";
 
 const config = defineConfig({
   layout: {
-    doc:'./src/routes/doc.svelte'
+    doc: './src/routes/doc.svelte',
+    themeSwitchLayout: './src/routes/themeSwitchLayout.svelte',
   },
   extensions: [".svelte.md", ".md", ".svx"],
 

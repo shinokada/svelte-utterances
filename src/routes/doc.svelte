@@ -28,6 +28,10 @@
       href: "/dynamic-theme",
     },
     {
+      name: "Theme Switch",
+      href: "/theme-switch",
+    },
+    {
       name: "GitHub",
       href: "https://github.com/shinokada/svelte-utterances",
     },

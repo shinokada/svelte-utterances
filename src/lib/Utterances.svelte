@@ -18,7 +18,6 @@
         }
       } catch (err) {
         // The iFrame has not been loaded yet.
-        console.log("error", err);
       }
     }
   }
