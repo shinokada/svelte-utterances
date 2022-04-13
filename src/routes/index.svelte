@@ -1,19 +1,13 @@
 <script>
   import Utterances from "$lib/Utterances.svelte";
-  let theme = "github-light";
-
-  const switchTheme = () => {
-    theme = theme === "github-light" ? "github-dark" : "github-light";
-  };
+  import { theme as themeStore } from "$lib/theme";
 </script>
 
 <header>
   <h1>Svelte Utterances component</h1>
-
-  <button on:click={switchTheme}>Toggle theme</button>
 </header>
 
-<Utterances reponame="shinokada/svelte-utterances" {theme} />
+<Utterances reponame="shinokada/svelte-utterances" theme={$themeStore} />
 
 <footer>
   <a href="https://www.npmjs.com/package/@codewithshin/svelte-utterances">NPM</a
@@ -22,26 +16,17 @@
 </footer>
 
 <style>
+  :global(html) {
+    transition: all 200ms ease;
+  }
+  :global(html.dark) {
+    background-color: hsl(0, 0%, 30%);
+    color: hsl(0, 0%, 90%);
+  }
   h1 {
     text-align: center;
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
       "Lucida Sans", Arial, sans-serif;
-  }
-  button {
-    display: block;
-    margin: auto;
-    padding: 1.5em 1em;
-    cursor: pointer;
-    background-color: #8585f9;
-    color: white;
-    border: none;
-    border-radius: 7px;
-    font-family: sans-serif;
-    line-height: 0em;
-    transition: all 100ms ease-in-out;
-  }
-  button:hover {
-    box-shadow: 1px 3px 8px rgb(179, 179, 212);
   }
 
   footer {
