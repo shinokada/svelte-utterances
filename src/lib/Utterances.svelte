@@ -8,6 +8,8 @@
   export let label = "comments";
   /** @type {string}*/
   export let theme = "github-light";
+
+  $: console.log("theme: ", theme);
   /** @type {HTMLDivElement} */
   let divElm;
   /** @type {HTMLScriptElement} */
@@ -15,30 +17,47 @@
   /** @type {boolean}*/
   let browser = false;
   $: {
-    if (browser) {
-      try {
-        const iFrame = divElm.getElementsByClassName("utterances-frame")[0];
-        if (iFrame) {
-          iFrame.contentWindow.postMessage(
-            { type: "set-theme", theme },
-            "https://utteranc.es"
-          );
-        }
-      } catch (err) {
-        // The iFrame has not been loaded yet.
-        console.log("error", err);
+    try {
+      /** @type {HTMLIFrameElement}*/
+      const iFrame =
+        browser && divElm.getElementsByClassName("utterances-frame")[0];
+      if (iFrame) {
+        iFrame.contentWindow.postMessage(
+          { type: "set-theme", theme },
+          "https://utteranc.es"
+        );
       }
+    } catch (e) {
+      // iFrame is not loaded yet!
+      console.log("error", e);
     }
   }
+  const sendPostMessage = () => {
+    const iFrame = divElm.getElementsByClassName("utterances-frame")[0];
+    if (!iFrame) {
+      // Recursion until iFrame is loaded
+      setTimeout(sendPostMessage, 100);
+      return;
+    }
+    iFrame.addEventListener("load", () => {
+      iFrame.contentWindow.postMessage(
+        { type: "set-theme", theme },
+        "https://utteranc.es"
+      );
+    });
+  };
   onMount(() => {
     scriptElm = document.createElement("script");
+
     scriptElm.setAttribute("repo", reponame);
     scriptElm.setAttribute("issue-term", issueTerm);
     scriptElm.setAttribute("label", label);
     scriptElm.setAttribute("crossorigin", "anonymous");
     scriptElm.src = "https://utteranc.es/client.js";
+
     divElm.appendChild(scriptElm);
     browser = true;
+    sendPostMessage();
   });
 </script>
 
