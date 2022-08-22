@@ -44,6 +44,7 @@
     scriptElm.setAttribute("repo", reponame);
     scriptElm.setAttribute("issue-term", issueTerm);
     scriptElm.setAttribute("label", label);
+    scriptElm.setAttribute("theme", theme);
     scriptElm.setAttribute("crossorigin", "anonymous");
     scriptElm.src = "https://utteranc.es/client.js";
 
