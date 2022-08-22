@@ -1,9 +1,19 @@
 <script>
   import Utterances from "$lib/Utterances.svelte";
+  
+  const STORAGE_KEY = "utterances_theme";
   let theme = "github-light";
+
+  $: {
+    if (typeof(window) !== "undefined") {
+      let _theme = localStorage.getItem(STORAGE_KEY);
+      theme = _theme ? _theme : theme;
+    }
+  }
 
   const switchTheme = () => {
     theme = theme === "github-light" ? "github-dark" : "github-light";
+    localStorage.setItem(STORAGE_KEY, theme)
   };
 </script>
 
