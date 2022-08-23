@@ -2,8 +2,16 @@
   import Utterances from "$lib/Utterances.svelte";
   let theme = "github-light";
 
+  const STORAGE_KEY = "utterances_mode"
+
+  if (typeof(window) !== "undefined") {
+    let _theme = localStorage.getItem(STORAGE_KEY)
+    theme = _theme ? _theme : theme
+  }
+
   const switchTheme = () => {
     theme = theme === "github-light" ? "github-dark" : "github-light";
+    localStorage.setItem(STORAGE_KEY, theme);
   };
 </script>
 
@@ -12,6 +20,7 @@
 
   <button on:click={switchTheme}>Toggle theme</button>
 </header>
+
 
 <Utterances reponame="shinokada/svelte-utterances" {theme} />
 
