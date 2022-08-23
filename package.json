@@ -11,16 +11,17 @@
   "homepage": "https://github.com/shinokada/svelte-uttrances",
   "license": "MIT",
   "scripts": {
-    "dev": "svelte-kit dev",
-    "build": "svelte-kit build",
+    "dev": "vite dev",
+    "build": "vite build",
     "package": "svelte-kit package",
-    "preview": "svelte-kit preview"
+    "preview": "vite preview"
   },
   "devDependencies": {
     "@sveltejs/adapter-auto": "next",
     "@sveltejs/kit": "next",
     "svelte": "^3.44.0",
-    "svelte2tsx": "^0.5.5"
+    "svelte2tsx": "^0.5.5",
+    "vite": "^3.0.9"
   },
   "type": "module",
   "keywords": [
