@@ -1,18 +1,16 @@
-import { defineMDSveXConfig as defineConfig } from "mdsvex";
+import { defineMDSveXConfig as defineConfig } from 'mdsvex';
 
 const config = defineConfig({
   layout: {
-    doc: './src/routes/doc.svelte',
-    themeSwitchLayout: './src/routes/themeSwitchLayout.svelte',
+    mainLayout: './src/routes/layouts/mainLayout/+page.svelte'
   },
-  extensions: [".svelte.md", ".md", ".svx"],
+  extensions: ['.svelte.md', '.md', '.svx'],
 
   smartypants: {
-    dashes: "oldschool",
+    dashes: 'oldschool'
   },
 
-  remarkPlugins: [],
-  rehypePlugins: [],
+  rehypePlugins: []
 });
 
 export default config;
