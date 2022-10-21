@@ -13,37 +13,24 @@
 		{ value: 'boxy-light', name: 'Boxy Light' },
 		{ value: 'gruvbox-dark', name: 'Gruvbox Dark' }
 	];
+
+	$: theme = $utterancesTheme;
 </script>
 
-<p class="dark:text-white">{$utterancesTheme}</p>
-<div class="max-w-4xl mx-auto py-4">
-	<Navbar let:hidden let:toggle>
-		<NavBrand href="/">
-			<img
-				src="/images/svelte-utterances-logo.png"
-				class="mr-3 h-6 sm:h-9"
-				alt="Svelte-Utterances"
-			/>
-			<span class="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
-				Svelte-Utterances
-			</span>
-		</NavBrand>
-		<NavHamburger on:click={toggle} />
-		<NavUl {hidden}>
-			<NavLi href="/" active={true}>Home</NavLi>
-			<NavLi href="/about">About</NavLi>
-			<NavLi href="https://github.com/shinokada/svelte-utterances">GitHub</NavLi>
-		</NavUl>
-	</Navbar>
-</div>
 <div class="max-w-3xl mx-auto pt-8">
 	<div class="container">
 		<slot />
 
 		<div class="my-16 relative">
-			<Select class="mt-2" items={options} bind:value={$utterancesTheme} />
+			<p class="dark:text-white">Current theme is: {theme}</p>
+			<Select
+				class="mt-2"
+				items={options}
+				bind:value={theme}
+				on:change={() => utterancesTheme.update((n) => (n = theme))}
+			/>
 
-			<Utterances reponame="shinokada/svelte-utterances" theme={$utterancesTheme} />
+			<Utterances reponame="shinokada/svelte-utterances" {theme} />
 		</div>
 	</div>
 </div>
