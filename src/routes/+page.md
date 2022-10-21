@@ -1,5 +1,5 @@
 ---
-layout: mainLayout
+layout: defaultLayout
 ---
 
 <div class="max-w-3xl mx-auto mb-8">
@@ -48,25 +48,14 @@ let theme = "github-light"
 ```svelte
 <script>
   import { Utterances, utterancesTheme } from "@codewithshin/svelte-utterances";
-  import { Select } from 'flowbite-svelte'
-  let options = [
-		{ value: 'github-light', name: 'GitHub Light' },
-		{ value: 'github-dark', name: 'GitHub Dark' },
-		{ value: 'github-dark-orange', name: 'GitHub Dark Orange' },
-		{ value: 'icy-dark', name: 'Icy Dark' },
-		{ value: 'dark-blue', name: 'Dark Blue' },
-		{ value: 'photon-dark', name: 'Photon Dark' },
-		{ value: 'boxy-light', name: 'Boxy Light' },
-		{ value: 'gruvbox-dark', name: 'Gruvbox Dark' }
-	];
+  const theme = 'dark-blue';
   let reponame = "your-repo-name"
 </script>
 <div class="container">
   <slot />
   <div class="my-16 relative">
-			<Select class="mt-2" items={options} bind:value={$utterancesTheme} />
-			<Utterances {reponame} theme={$utterancesTheme} />
-		</div>
+    <Utterances {reponame} {theme} />
+  </div>
 </div>
 ```
 

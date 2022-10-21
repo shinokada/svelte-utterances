@@ -1,4 +1,5 @@
 <script>
+	import utterancesTheme from './theme';
 	import { onMount } from 'svelte';
 	/** @type {string}*/
 	export let reponame;
@@ -7,9 +8,8 @@
 	/** @type {string}*/
 	export let label = 'comments';
 	/** @type {string}*/
-	export let theme = 'github-light';
+	export let theme = $utterancesTheme;
 
-	// $: console.log("theme: ", theme);
 	/** @type {HTMLDivElement} */
 	let divElm;
 	/** @type {HTMLScriptElement} */
@@ -28,7 +28,7 @@
 			console.log('error', e);
 		}
 	}
-	// console.log('theme:', theme);
+
 	const sendPostMessage = () => {
 		const iFrame = divElm.getElementsByClassName('utterances-frame')[0];
 		if (!iFrame) {
@@ -36,9 +36,8 @@
 			setTimeout(sendPostMessage, 100);
 			return;
 		}
-		iFrame.addEventListener('load', () => {
-			iFrame.contentWindow.postMessage({ type: 'set-theme', theme }, 'https://utteranc.es');
-		});
+
+		iFrame.contentWindow.postMessage({ type: 'set-theme', theme }, 'https://utteranc.es');
 	};
 	onMount(() => {
 		scriptElm = document.createElement('script');
