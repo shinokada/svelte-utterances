@@ -14,12 +14,6 @@ layout: defaultLayout
 npm i -D @codewithshin/svelte-utterances 
 ```
 
-<p class="dark:text-white">For this example, install Flowbite-Svelte:</p>
-
-```sh
-npm i -D flowbite flowbite-svelte classnames @popperjs/core
-```
-
 <h2 class="text-gray-900 text-2xl w-full dark:text-white py-4">Default Props</h2>
 
 ```js
